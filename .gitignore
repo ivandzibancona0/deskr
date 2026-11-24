@@ -1,0 +1,97 @@
+# ==============================================================================
+# DeskRemote — .gitignore (Seguridad, Secretos, Python, PyInstaller y SO)
+# ==============================================================================
+
+# 1. Datos sensibles de DeskRemote (claves, TOFU, túneles, auditoría y capturas)
+.deskremote/
+identity_ed25519.key
+known_peers.json
+tunnel_known_hosts
+audit.log
+audit.log.*
+logs/
+captura_*.png
+*.part
+
+# 2. Claves criptográficas, certificados y archivos de secretos/entorno
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+*.jks
+*.keystore
+.env
+.env.*
+!.env.example
+*.secret
+secrets.json
+secrets.yaml
+secrets.yml
+credentials.json
+config.local.*
+
+# 3. Ejecutables compilados y artefactos de PyInstaller (publicar en GitHub Releases)
+DeskRemote.exe
+*.exe
+*.msi
+build/
+dist/
+*.spec
+version_info.txt
+*.manifest
+
+# 4. Entornos virtuales y cachés de Python
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# 5. Cachés de pruebas, linters y cobertura
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# 6. Logs y archivos temporales generales
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# 7. Editores e IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 8. Archivos del sistema operativo (Windows / macOS / Linux)
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+.DS_Store
+.AppleDouble
+.LSOverride
